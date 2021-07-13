@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: installing git, wget, tree on node1
+    apt:
+      name: "{{item}}"
+      state: present
+    with_items:
+      - git
+      - wget
+      - tree  
