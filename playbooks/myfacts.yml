@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: no
+  tasks: 
+  - name: installing git, wget, tree
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - git
+      - wget
+      - tree  
