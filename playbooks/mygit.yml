@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: install git on node1
+    apt:
+      name: git
+      state: present
+
+
+  - name: install wget on node1
+    apt:
+      name: wget
+      state: present
+
+  - name: install tree on node1
+    apt: 
+      name: tree
+      state: present
