@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: installing jdk8 on node1
+    apt:
+      name: "{{myjdkonubuntuos}}"
+      state: present
+    when: ansible_os_family == "Debian"
+
+  - name: installing jdk8 on node2
+    yum:
+      name: "{{myjdkonamazonos}}"
+      state: present
+    when: ansible_os_family == "RedHat"
+        
