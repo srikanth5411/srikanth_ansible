@@ -2,8 +2,8 @@
 - hosts: ubuntuos
   become: yes
   vars:
-  myvar1: srikanth
-  myvar2: shree
+    myvar1: srikanth
+    myvar2: shree
   tasks:
   - name: displaying myvar1 value
     debug:
