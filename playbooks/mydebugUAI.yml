@@ -1,0 +1,11 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: displaying hosts details
+    command: hostname -f
+    register: myresult
+
+  - name: displaying my result value
+    debug:
+      msg: "{{myresult}}"   
