@@ -1,0 +1,15 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: install jdk11 on node1
+    apt:
+      name: "{{myjdkonubuntuos}}"
+      state: present
+    when: ansible_os_family == "Debian"
+    
+  - name: install jdk11 on node2
+    yum:
+      name: "{{myjdkonamazonos}}"
+      state: present
+    when: ansible_os_family == "RedHat"    
