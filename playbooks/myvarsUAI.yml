@@ -1,0 +1,13 @@
+---
+- hosts: ubuntuos
+  become: yes
+  vars:
+  myvar1: srikanth
+  myvar2: shree
+  tasks:
+  - name: displaying myvar1 value
+    debug:
+      msg: "{{myvar1}}"
+  - name: displaying myvar2 value  
+    debug: 
+      msg: "{{myvar2}}"
