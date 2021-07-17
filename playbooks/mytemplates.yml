@@ -14,7 +14,7 @@
       
   - name: to copy index file into nodes
     template:
-      src: /home/srikanth/myindex.j2
+      src: myindex.j2
       dest: /var/www/html/index.html
 
   - name: to restart the webserver
