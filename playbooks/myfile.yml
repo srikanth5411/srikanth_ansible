@@ -1,5 +1,5 @@
 ---
 - name: i want to create file on all nodes
   file:
-      path: /home/srikantrh/srikanth.txt
+      path: /home/srikanth.txt
       state: touch
