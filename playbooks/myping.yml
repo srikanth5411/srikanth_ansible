@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: app server
   tasks:
   - name: ping to node1
     ping:
