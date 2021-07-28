@@ -1,0 +1,6 @@
+--- 
+- name: copy the username and password on nodes
+  template:
+    src: templates/mytomuser.j2
+    dest: /usr/share/tomcat/conf/tomcat-users.xml
+  notify: restarttomcat  
